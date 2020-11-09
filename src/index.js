@@ -1,3 +1,2 @@
-let name = 'Alex';
-let msg = `Hello ${name}`;
+import { msg } from './myModule';
 console.log(msg);

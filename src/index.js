@@ -48,7 +48,7 @@ const resolvers = {
 			return null;
 		},
 		title() {
-			return 'Book';
+			return 'Lord of Rings';
 		},
 		price() {
 			return 34.54;
@@ -60,7 +60,7 @@ const resolvers = {
 			return 4.5;
 		},
 		inStock() {
-			return true;
+			return false;
 		},
 	},
 };

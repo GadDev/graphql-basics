@@ -1,5 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga';
 
+// Sacalar Type - String, Boolean, Int, Float, ID
 // type definition (application schema)
 const typeDefs = `
 	type Query {
@@ -7,6 +8,15 @@ const typeDefs = `
 		name: String!
 		location: String!
 		bio: String!
+		id: ID!
+		age: Int!
+		employed: Boolean!
+		gpa: Float
+		title: String!
+		price: Float!
+		releaseYear: Int
+		rating: Float
+		inStock: Boolean!
 	}
 `;
 
@@ -24,6 +34,33 @@ const resolvers = {
 		},
 		bio() {
 			return "Hello, I'm Alexandre, I'm frontend engineer";
+		},
+		id() {
+			return 'fewgwe3241';
+		},
+		age() {
+			return 38;
+		},
+		employed() {
+			return true;
+		},
+		gpa() {
+			return null;
+		},
+		title() {
+			return 'Book';
+		},
+		price() {
+			return 34.54;
+		},
+		releaseYear() {
+			return 2000;
+		},
+		rating() {
+			return 4.5;
+		},
+		inStock() {
+			return true;
 		},
 	},
 };

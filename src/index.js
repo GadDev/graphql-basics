@@ -17,6 +17,20 @@ const typeDefs = `
 		releaseYear: Int
 		rating: Float
 		inStock: Boolean!
+		me: User!
+		post: Post!
+	}
+	type User {
+		id: ID!
+		name: String!
+		email: String!
+		age: Int
+	}
+	type Post {
+		id: ID!
+		title: String!
+		body: String!
+		published: Boolean!
 	}
 `;
 
@@ -61,6 +75,22 @@ const resolvers = {
 		},
 		inStock() {
 			return false;
+		},
+		me() {
+			return {
+				id: '1234567',
+				name: 'Alex Gadaix',
+				email: 'add@add.com',
+				age: 38,
+			};
+		},
+		post() {
+			return {
+				id: '2345678',
+				title: 'My first post',
+				body: '',
+				published: true,
+			};
 		},
 	},
 };
